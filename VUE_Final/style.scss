@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    font-style: normal;
+    line-height: normal;
+    // overflow-x: hidden;
+}
+
+.center {
+    padding-left: calc(50% - 1200px / 2);
+    padding-right: calc(50% - 1200px / 2);
+}
+
+.header {
+    height: 138px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        width: 177px;
+        left: 0;
+        right: 143px;
+        top: 8px;
+        bottom: 8px;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 41px;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+    }
+
+    &__link {
+        color: rgb(41, 47, 54);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 125%;
+    }
+}
+
+.banner {
+
+    height: 758px;
+    margin-bottom: 96px;
+
+    &__banner-item {
+        position: relative;
+        width: 1200px;
+        height: 758px;
+        overflow: hidden;
+        border-radius: 78px;
+    }
+
+    &__banner-photo {
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__banner-item>&__banner-photo {
+        display: block;
+        margin-left: -94px;
+        margin-top: -542px;
+    }
+
+    &__banner-dsc {
+        position: relative;
+        width: 433px;
+        bottom: 542px;
+        left: 52px;
+    }
+
+    &__banner-title {
+        color: rgb(41, 47, 54);
+        font-family: "DM Serif Display", serif;
+        font-size: 65px;
+        font-weight: 400;
+        line-height: 125%;
+        text-align: left;
+        height: 162px;
+    }
+
+    &__banner-text {
+        color: rgb(77, 80, 83);
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 150%;
+        text-align: left;
+        height: 66px;
+        margin: 18px 0px 48px;
+    }
+
+    &__banner-btn {
+        padding: 14px 49px;
+        border: 1px solid rgb(41, 47, 54);
+        border-radius: 18px;
+        background-color: rgb(41, 47, 54);
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 125%;
+        text-align: center;
+    }
+}
+
+.project {
+    margin-bottom: 100px;
+
+    &__project-heading {
+        width: 1014px;
+        padding-left: 232px;
+        margin-bottom: 94px;
+    }
+
+    &__project-title {
+        color: rgb(41, 47, 54);
+        font-family: "DM Serif Display", serif;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 125%;
+        text-align: center;
+    }
+
+    &__project-text {
+        color: rgb(77, 80, 83);
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 150%;
+        text-align: center;
+    }
+
+    &__box-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 100px;
+        padding-bottom: 54px;
+    }
+
+    &__project-content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 28px;
+
+    }
+
+    &__title-item {
+        color: rgb(41, 47, 54);
+        font-family: "DM Serif Display", serif;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: 2%;
+        text-align: left;
+    }
+
+    &__text-item {
+        color: rgb(77, 80, 83);
+        font-family: Jost;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 1%;
+        text-align: left;
+    }
+}
+
+.counters {
+    background: rgb(244, 240, 236);
+    height: 457px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 96px;
+
+    &__counter-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__count {
+        color: rgb(205, 162, 116);
+        font-family: "DM Serif Display", serif;
+        font-size: 85px;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: 2%;
+        text-align: left;
+    }
+
+    &__counter-dsc {
+        color: rgb(77, 80, 83);
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 150%;
+        text-align: left;
+    }
+}
+
+.blog {
+
+    &__blog-heading {
+        width: 1014px;
+        padding-left: 232px;
+        margin-bottom: 52px;
+    }
+
+    &__blog-title {
+        color: rgb(41, 47, 54);
+        font-family: "DM Serif Display", serif;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 125%;
+        text-align: center;
+        padding-bottom: 12px;
+    }
+
+    &__blog-text {
+        color: rgb(77, 80, 83);
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 150%;
+        text-align: center;
+    }
+
+    &__blog-items {
+        display: flex;
+        gap: 27px;
+
+    }
+
+    &__blog-item {
+        position: relative;
+        width: 382px;
+        height: 521px;
+        border: 1px solid rgb(231, 231, 231);
+        border-radius: 62px;
+        box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+        // background: rgb(244, 240, 236);
+    }
+
+    &__subcontent {
+        position: absolute;
+        padding: 21px;
+    }
+
+
+    &__blog-img-box {
+        position: relative;
+    }
+
+    &__blog-item-img {
+        position: relative;
+        padding-bottom: 21px;
+    }
+
+    &__tag {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 144px;
+        height: 41px;
+        border-radius: 8px 8px 8px 0px;
+
+        background: rgb(255, 255, 255);
+        color: rgb(77, 80, 83);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        left: 20px;
+        bottom: 40px;
+    }
+
+
+    &__blog-item-text {
+        color: rgb(41, 47, 54);
+        font-family: "DM Serif Display", serif;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 125%;
+        text-align: left;
+    }
+
+    &__box-date {
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__date {
+        color: rgb(77, 80, 83);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        text-align: left;
+        text-transform: capitalize;
+    }
+
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 96px;
+    padding-bottom: 134px;
+
+    &__logo {
+        width: 177px;
+        left: 0;
+        right: 143px;
+        top: 8px;
+        bottom: 8px;
+    }
+
+    &__footer-text {
+        color: rgb(77, 80, 83);
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 150%;
+        text-align: left;
+    }
+
+    &__footer-title {
+        color: rgb(41, 47, 54);
+        font-family: "DM Serif Display", serif;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 125%;
+        text-align: left;
+    }
+
+    &__footer-left {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        gap: 18px;
+    }
+
+    &__footer-middle {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        gap: 36px;
+        padding-left: 94px;
+
+    }
+
+    &__footer-right {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        gap: 36px;
+        padding-left: 141px;
+
+    }
+
+}
