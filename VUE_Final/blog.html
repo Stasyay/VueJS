@@ -12,11 +12,13 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
+    <script src="articles.js" defer></script>
 </head>
 
 <body>
 
-    <div class="top">
+    <div id="app">
         <header class="header center">
             <nav class="header__left">
                 <a href="index.html"><img class="header__logo" src="img/logo-1.png" alt="logo"></a>
@@ -73,126 +75,24 @@
             </div>
 
             <div class="news__blog-items">
-                <div class="news__blog-item">
+
+                <div class="news__blog-item" v-for="article in articles" :id="article.id">
                     <div class="news__subcontent">
                         <div class="news__blog-img-box">
-                            <img class="news__blog-item-img" src="img/BlogImg1.png" alt="blog">
-                            <h3 class="news__tag">Kitchan Design</h3>
+                            <img class="news__blog-item-img" :src="article.image" alt="blog">
+                            <h3 class="news__tag">{{article.tag}}</h3>
                         </div>
-                        <p class="news__blog-item-text">Let’s Get Solution For Building Construction Work</p>
+                        <p class="news__blog-item-text">{{article.title}}</p>
                         <div class="news__box-date">
-                            <p class="news__date">26 December,2022 </p>
+                            <p class="news__date">{{article.date}} </p>
                             <a href="#">
-                                <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
+                                <svg class="news__link-svg" width="52" height="53" viewBox="0 0 52 53" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
+                                    <circle class="news__link-circle" cx="26" cy="26.267" r="26" fill="#F4F0EC" />
                                     <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news__blog-item" style="background: rgb(244, 240, 236)">
-                    <div class="news__subcontent">
-                        <div class="news__blog-img-box">
-                            <img class="news__blog-item-img" src="img/BlogImg2.png" alt="blog">
-                            <h3 class="news__tag">Living Design</h3>
-                        </div>
-                        <p class="news__blog-item-text">Let’s Get Solution For Building Construction Work</p>
-                        <div class="news__box-date">
-                            <p class="news__date">22 December,2022 </p>
-                            <a href="#">
-                                <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="26" cy="26.267" r="26" fill="#FFFFFF" />
-                                    <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news__blog-item">
-                    <div class="news__subcontent">
-                        <div class="news__blog-img-box">
-                            <img class="news__blog-item-img" src="img/BlogImg3.png" alt="blog">
-                            <h3 class="news__tag">Kitchan Design</h3>
-                        </div>
-                        <p class="news__blog-item-text">Let’s Get Solution For Building Construction Work</p>
-                        <div class="news__box-date">
-                            <p class="news__date">26 December,2022 </p>
-                            <a href="#">
-                                <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                                    <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news__blog-item">
-                    <div class="news__subcontent">
-                        <div class="news__blog-img-box">
-                            <img class="news__blog-item-img" src="img/BlogImg4.png" alt="blog">
-                            <h3 class="news__tag">Kitchan Design</h3>
-                        </div>
-                        <p class="news__blog-item-text">Let’s Get Solution For Building Construction Work</p>
-                        <div class="news__box-date">
-                            <p class="news__date">26 December,2022 </p>
-                            <a href="#">
-                                <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                                    <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news__blog-item">
-                    <div class="news__subcontent">
-                        <div class="news__blog-img-box">
-                            <img class="news__blog-item-img" src="img/BlogImg5.png" alt="blog">
-                            <h3 class="news__tag">Living Design</h3>
-                        </div>
-                        <p class="news__blog-item-text">Low Cost Latest Invented Interior Designing
-                            Ideas.</p>
-                        <div class="news__box-date">
-                            <p class="news__date">22 December,2022 </p>
-                            <a href="#"> <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                                    <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news__blog-item">
-                    <div class="news__subcontent">
-                        <div class="news__blog-img-box">
-                            <img class="news__blog-item-img" src="img/BlogImg6.png" alt="blog">
-                            <h3 class="news__tag">Interior Design</h3>
-                        </div>
-                        <p class="news__blog-item-text">Best For Any Office & Business Interior
-                            Solution</p>
-                        <div class="news__box-date">
-                            <p class="news__date">25 December,2022 </p>
-                            <a href="#"> <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                                    <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg></a>
                         </div>
                     </div>
                 </div>
