@@ -12,11 +12,14 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
+    <script src="articles.js" defer></script>
 </head>
 
 <body>
 
-    <div class="top">
+    <div id="app">
         <header class="header center">
             <nav class="header__left">
                 <a href="index.html"><img class="header__logo" src="img/logo-1.png" alt="logo"></a>
@@ -33,8 +36,6 @@
         </div>
 
         <div class="article center">
-
-            <!-- <div class="article__container"> -->
 
             <article class="article__article-content">
                 <h1 class="article__article-title">
@@ -63,7 +64,7 @@
                     repeat predefined chunks as necessary.
                 </p>
 
-                <img src="img/Quotes.png" alt="photo">
+                <img class="article__article-quotes" src="img/Quotes.png" alt="photo">
 
                 <h1 class="article__article-title">
                     Design sprints are great
@@ -75,7 +76,7 @@
                     suffered.
                 </p>
 
-                <ol>
+                <ol class="article__article-list">
                     <li class="article__article-li article__article-text">Contrary to popular belief.There are many
                         variations of passages of Lorem Ipsum available, but
                         the majority have suffered.</li>
@@ -87,17 +88,57 @@
                         the majority have suffered.</li>
                 </ol>
 
+                <img class="article__article-photo" src="img/article1_1.png" alt="photo">
+
+                <p class="article__article-text">
+                    Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to
+                    popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have
+                    suffered.
+                </p>
             </article>
 
             <div class="article__tags">
-                <a class="article__tag" href="#">Lorem</a>
-                <a class="article__tag" href="#">Ipsum</a>
-                <a class="article__tag" href="#">Dolor</a>
-                <a class="article__tag" href="#">Sit</a>
-                <a class="article__tag" href="#">Amet</a>
+                <h3 class="article__tags-title">Tags</h3>
+                <div class="article__tags-btn">
+                    <button v-for="button in buttons" @click="selectTag" class="article__tag">{{ button
+                        }}</button>
+
+                </div>
+
+                //фильтр
+
+
+                <section class="articles">
+                    <div v-for="article in filteredArticles" class="article" :id="article.id">
+
+                        <div class="blog__subcontent">
+                            <div class="blog__blog-img-box">
+                                <img class="blog__blog-item-img" :src="article.image" alt="blog">
+                                <h3 class="blog__tag">{{article.tag}}</h3>
+                            </div>
+                            <p class="blog__blog-item-text">{{article.title}}</p>
+                            <div class="blog__box-date">
+                                <p class="blog__date">{{article.date}} </p>
+                                <a href="#">
+                                    <svg class="blog__link-svg" width="52" height="53" viewBox="0 0 52 53" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="blog__link-circle" cx="26" cy="26.267" r="26" fill="#F4F0EC" />
+                                        <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+
+
 
             </div>
-            <!-- </div> -->
         </div>
 
         <footer class="footer center">

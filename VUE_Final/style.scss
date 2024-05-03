@@ -692,7 +692,7 @@ body {
     }
 
     &__article-text {
-        margin-bottom: 35px;
+        // margin-bottom: 35px;
         color: rgb(77, 80, 83);
         font-size: 22px;
         font-weight: 400;
@@ -700,14 +700,68 @@ body {
         text-align: left;
     }
 
-    &__article-li::-moz-list-number {
-
-        color: red;
-
-
+    &__article-quotes {
+        margin-top: 35px;
     }
-}
 
-ol {
-    padding-left: 24px;
+    &__article-list {
+        margin-top: 20px;
+        margin-bottom: 44px;
+        padding-left: 24px;
+    }
+
+    &__article-li {
+        margin-bottom: 32px;
+    }
+
+    &__article-photo {
+        margin-top: 12px;
+        margin-bottom: 35px;
+    }
+
+    &__tags {
+        margin-left: 57px;
+    }
+
+    &__tags-title {
+        padding-bottom: 24px;
+        color: rgb(41, 47, 54);
+        font-family: "DM Serif Display", serif;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 125%;
+        text-align: left;
+    }
+
+    &__tags-btn {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+
+    &__tag {
+        background: rgb(244, 240, 236);
+        color: rgb(41, 47, 54);
+        border-radius: 10px;
+        border: 1px solid rgb(244, 240, 236);
+        padding: 9px 30px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 125%;
+        text-align: center;
+    }
+
+    &__tag:hover {
+        background: #292F36;
+        color: rgb(255, 255, 255);
+    }
+
+    &__tag-selected {
+        background-color: #292F36;
+        color: rgb(255, 255, 255);
+    }
+
 }

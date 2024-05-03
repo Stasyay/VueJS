@@ -599,17 +599,63 @@ body {
   text-align: left;
 }
 .article__article-text {
-  margin-bottom: 35px;
   color: rgb(77, 80, 83);
   font-size: 22px;
   font-weight: 400;
   line-height: 150%;
   text-align: left;
 }
-.article__article-li::-moz-list-number {
-  color: red;
+.article__article-quotes {
+  margin-top: 35px;
 }
-
-ol {
+.article__article-list {
+  margin-top: 20px;
+  margin-bottom: 44px;
   padding-left: 24px;
+}
+.article__article-li {
+  margin-bottom: 32px;
+}
+.article__article-photo {
+  margin-top: 12px;
+  margin-bottom: 35px;
+}
+.article__tags {
+  margin-left: 57px;
+}
+.article__tags-title {
+  padding-bottom: 24px;
+  color: rgb(41, 47, 54);
+  font-family: "DM Serif Display", serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 125%;
+  text-align: left;
+}
+.article__tags-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.article__tag {
+  background: rgb(244, 240, 236);
+  color: rgb(41, 47, 54);
+  border-radius: 10px;
+  border: 1px solid rgb(244, 240, 236);
+  padding: 9px 30px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 125%;
+  text-align: center;
+}
+.article__tag:hover {
+  background: #292F36;
+  color: rgb(255, 255, 255);
+}
+.article__tag-selected {
+  background-color: #292F36;
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=style.css.map */
