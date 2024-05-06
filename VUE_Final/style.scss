@@ -759,9 +759,73 @@ body {
         color: rgb(255, 255, 255);
     }
 
-    &__tag-selected {
+    &__tag_active {
         background-color: #292F36;
         color: rgb(255, 255, 255);
+    }
+
+    &__blog-filter {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__blog-item {
+        position: relative;
+        width: 382px;
+        height: 521px;
+        border: 1px solid rgb(231, 231, 231);
+        border-radius: 62px;
+        box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+    }
+
+    &__blog-item:hover {
+        background-color: rgb(244, 240, 236);
+    }
+
+    &__blog-item:hover &__link-circle {
+        fill: #FFFFFF;
+    }
+
+    &__subcontent {
+        position: absolute;
+        padding: 21px;
+    }
+
+    &__blog-img-box {
+        position: relative;
+    }
+
+    &__blog-item-img {
+        position: relative;
+        padding-bottom: 21px;
+    }
+
+
+    &__blog-item-text {
+        color: rgb(41, 47, 54);
+        font-family: "DM Serif Display", serif;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 125%;
+        text-align: left;
+    }
+
+    &__box-date {
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__date {
+        color: rgb(77, 80, 83);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        text-align: left;
+        text-transform: capitalize;
     }
 
 }

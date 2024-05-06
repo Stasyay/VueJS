@@ -1,9 +1,26 @@
+const Tags = {
+    name: 'Tags',
+    props: {
+        article__tag_active: { type: Boolean, default: false },
+        tags: { type: Object, default: {} },
+    },
+    template: `<button class="article__tag" :class="{article__tag_active}" @click="$emit('click')">{{tags.title}}</button>`,
+};
+
 const app = new Vue({
     el: '#app',
+    components: {
+        Tags,
+    },
     data: {
-        selectedTag: [],
-        buttons: [
-            'Kitchen', 'Bedroom', 'Building', 'Architecture', 'Kitchen Planning', 'Bedroom'
+        activeIndex: 0,
+        tags: [
+            { title: 'Kitchen' },
+            { title: 'Bedroom' },
+            { title: 'Building' },
+            { title: 'Architecture' },
+            { title: 'Kitchen Planning' },
+            { title: 'Bedroom' }
         ],
         articles: [
             {
@@ -52,32 +69,13 @@ const app = new Vue({
         ]
     },
     methods: {
-
-        // Необходимо, чтобы на выборе Tags происходила сортировка статей по выбранному тегу. Тег можно выбрать только один.
-        selectTag(e) {
-
-
-            // if (this.selectedTag.includes(e.target.textContent)) {
-            //     this.selectedTag = this.selectedTag.filter(
-            //         (elem) => elem != e.target.textContent
-            //     );
-            //     console.log(`if ${this.selectedTag}`);
-            //     e.target.classList.toggle("article__tag-selected");
-            //     console.log(e);
-            // } else {
-            //     this.selectedTag.push(e.target.textContent);
-            //     e.target.classList.toggle("article__tag-selected");
-            //     e.preventDefault();
-            //     console.log(e.preventDefault());
-            // }
-
-
-
+        selectTag(index) {
+            this.activeIndex = index;
         }
     },
     computed: {
         filteredArticles() {
-            return this.articles.filter(article => article.tag.includes(this.selectedTag))
+            return this.articles.filter(article => article.tag.includes(this.tags[this.activeIndex].title))
         }
     }
 })

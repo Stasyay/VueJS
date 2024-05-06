@@ -655,7 +655,60 @@ body {
   background: #292F36;
   color: rgb(255, 255, 255);
 }
-.article__tag-selected {
+.article__tag_active {
   background-color: #292F36;
   color: rgb(255, 255, 255);
+}
+.article__blog-filter {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.article__blog-item {
+  position: relative;
+  width: 382px;
+  height: 521px;
+  border: 1px solid rgb(231, 231, 231);
+  border-radius: 62px;
+  box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+}
+.article__blog-item:hover {
+  background-color: rgb(244, 240, 236);
+}
+.article__blog-item:hover .article__link-circle {
+  fill: #FFFFFF;
+}
+.article__subcontent {
+  position: absolute;
+  padding: 21px;
+}
+.article__blog-img-box {
+  position: relative;
+}
+.article__blog-item-img {
+  position: relative;
+  padding-bottom: 21px;
+}
+.article__blog-item-text {
+  color: rgb(41, 47, 54);
+  font-family: "DM Serif Display", serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 125%;
+  text-align: left;
+}
+.article__box-date {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.article__date {
+  color: rgb(77, 80, 83);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: left;
+  text-transform: capitalize;
 }/*# sourceMappingURL=style.css.map */

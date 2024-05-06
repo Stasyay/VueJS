@@ -100,29 +100,25 @@
             <div class="article__tags">
                 <h3 class="article__tags-title">Tags</h3>
                 <div class="article__tags-btn">
-                    <button v-for="button in buttons" @click="selectTag" class="article__tag">{{ button
-                        }}</button>
-
+                    <Tags v-for="(tag, index) in tags" :article__tag_active="activeIndex === index" :tags="tag"
+                        :key="tags.id" @click="selectTag(index)"></Tags>
                 </div>
 
-                //фильтр
+                <div class="article__blog-filter">
+                    <div v-for="article in filteredArticles" class="article__blog-item" :id="article.id">
 
-
-                <section class="articles">
-                    <div v-for="article in filteredArticles" class="article" :id="article.id">
-
-                        <div class="blog__subcontent">
-                            <div class="blog__blog-img-box">
-                                <img class="blog__blog-item-img" :src="article.image" alt="blog">
-                                <h3 class="blog__tag">{{article.tag}}</h3>
+                        <div class="article__subcontent">
+                            <div class="article__blog-img-box">
+                                <img class="article__blog-item-img" :src="article.image" alt="blog">
                             </div>
-                            <p class="blog__blog-item-text">{{article.title}}</p>
-                            <div class="blog__box-date">
-                                <p class="blog__date">{{article.date}} </p>
+                            <p class="article__blog-item-text">{{article.title}}</p>
+                            <div class="article__box-date">
+                                <p class="article__date">{{article.date}} </p>
                                 <a href="#">
-                                    <svg class="blog__link-svg" width="52" height="53" viewBox="0 0 52 53" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle class="blog__link-circle" cx="26" cy="26.267" r="26" fill="#F4F0EC" />
+                                    <svg class="article__link-svg" width="52" height="53" viewBox="0 0 52 53"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="article__link-circle" cx="26" cy="26.267" r="26"
+                                            fill="#F4F0EC" />
                                         <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
@@ -131,13 +127,7 @@
                         </div>
                     </div>
 
-                </section>
-
-
-
-
-
-
+                </div>
             </div>
         </div>
 
